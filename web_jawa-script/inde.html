@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container-md text-center">
+      <h1>Objednávka</h1>
+      <div class="row">
+        <div class="col-10">
+          <select
+            class="form-select form-select-lg mb-3"
+            aria-label="Large select example"
+            id="krmivo"
+          >
+            <option selected>Vyber krmivo</option>
+            <option value="150">Psí žrádlo 150 Kč/kg</option>
+            <option value="120">Kočičí žrádlo 120 Kč/kg</option>
+            <option value="50">Žrádlo pro rybičky 50 Kč/kg</option>
+            <option value="50">Žrádlo pro tygra 800 Kč/kg</option>
+          </select>
+        </div>
+        <div class="col-2">
+          <div class="form-floating mb-3">
+            <input
+              type="number"
+              class="form-control"
+              id="mn"
+              placeholder="kg"
+            />
+            <label>kg</label>
+          </div>
+        </div>
+      </div>
+
+      <input class="form-check-input" type="checkbox" value="1,3" id="bio" />
+      <label class="form-check-label text-start" for="flexCheckDefault">
+        Bio kvalita (+ 30 procent ze základní ceny) </label
+      ><br />
+      <input class="form-check-input" type="checkbox" value="1.5" id="extra" />
+      <label class="form-check-label text-start" for="flexCheckDefault">
+        Extra premium kvalita (+50 procent ze základní ceny krmiva) </label
+      ><br />
+      <input class="form-check-input" type="checkbox" value="0.85" id="chudy" />
+      <label class="form-check-label text-start" for="flexCheckDefault">
+        Extra nekvalita pro chudé : -D (-15 procent ze základní ceny
+        krmiva)</label
+      ><br />
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value="500"
+        id="darkove"
+      />
+      <label class="form-check-label" for="flexCheckDefault">
+        Dárkové balení (+500 Kč)</label
+      ><br />
+      <h3>Doprava</h3>
+
+      <input
+        class="form-check-input"
+        type="radio"
+        name="flexRadioDefault"
+        id="osobni_odber"
+        checked
+      />
+      <label class="form-check-label" for="flexRadioDefault1">
+        Osobní odběr (bez příplatku) </label
+      ><br />
+      <input
+        class="form-check-input"
+        type="radio"
+        name="flexRadioDefault"
+        id="fir_kuryr"
+      />
+      <label class="form-check-label" for="flexRadioDefault1">
+        Firemní kurýr (+10 procent z aktuální ceny krmiva – tj. již včetně
+        volitelných vlastností) </label
+      ><br />
+      <input
+        class="form-check-input"
+        type="radio"
+        name="flexRadioDefault"
+        id="cp"
+      />
+      <label class="form-check-label" for="flexRadioDefault1">
+        Česká pošta (+250 Kč) </label
+      ><br />
+
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="celkem_cena"
+          placeholder="Celková cena"
+        />
+        <label for="celkem_cena">Celková cena</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="kapital" />
+        <label for="celkem_cena">Kapital</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="jmeno" />
+        <label for="celkem_cena">Jméno</label>
+      </div>
+      <div class="form-floating">
+        <input type="email" class="form-control" id="email" />
+        <label for="celkem_cena">Email</label>
+      </div>
+
+      <button type="button" class="btn btn-primary" id="prepocitej">
+        Přepočítej
+      </button>
+      <button type="button" class="btn btn-secondary" id="odesli">
+        Odešli
+      </button>
+    </div>
+    <!--konec konteineru-->
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
